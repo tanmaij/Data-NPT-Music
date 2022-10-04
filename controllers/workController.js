@@ -10,7 +10,7 @@ const createSong = async(req,res)=>{
         ...req.body
     }
     try{
-        const song = await work.create({_id,name,link})
+        const song = await work.create({_id,name,link:"https://www.youtube.com/watch?v=ecBco63zvas"})
         res.status(200).json(song)
     }
     catch(err){
